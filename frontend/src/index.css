@@ -1,0 +1,73 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Respect dark theme; actual background handled by CosmicBackground.css */
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.9);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #8aa2ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Remove flex centering to let the card's own margins position it */
+  display: block;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(138, 162, 255, 0.35);
+  padding: 0.6em 1.1em;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgba(18, 18, 28, 0.7);
+  cursor: pointer;
+  transition: border-color 0.25s, transform 120ms ease;
+}
+
+button:hover {
+  border-color: rgba(138, 162, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid rgba(138, 162, 255, 0.55);
+  outline-offset: 3px;
+}
+
+/* Light scheme fallback (if someone forces light mode) */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+  }
+
+  button {
+    background-color: #f1f3ff;
+  }
+}

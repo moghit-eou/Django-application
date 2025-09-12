@@ -1,0 +1,33 @@
+/* App.css — minimal layout helpers for the page shell */
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  /* let the card control its own spacing */
+  text-align: center;
+}
+
+/* Remove unused demo styles from Vite template */
+.logo,
+.logo.react,
+.read-the-docs {
+  all: unset;
+}
+
+/* Optional utility: a subtle fade-in for the first render */
+@keyframes app-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#root {
+  animation: app-fade 320ms ease-out;
+}
