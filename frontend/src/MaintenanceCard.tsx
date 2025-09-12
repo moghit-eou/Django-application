@@ -1,4 +1,3 @@
-import "./MaintenanceCard.css";
 
 function MaintenanceCard() {
     return (
